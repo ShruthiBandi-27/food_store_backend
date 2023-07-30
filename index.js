@@ -16,6 +16,10 @@ app.use(express.json());
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Yummy Tummy App!!!</h1>");
+})
+
 app.use('/api/foods', foodRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
